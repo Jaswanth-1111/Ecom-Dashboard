@@ -1,0 +1,239 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+.signupPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #244682;
+  padding: 20px;
+}
+
+.signupBox {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.inputIcon {
+  display: flex;
+  align-items: center;
+  background: #f0f2f5;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  gap: 12px;
+}
+
+.inputIcon input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 30px 0 15px 0;
+}
+
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.search-box {
+  width: 50%;
+  max-width: 600px;
+}
+
+.search {
+  width: 100%;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  text-align: center;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.layout {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 30px;
+}
+
+.sidebar {
+  width: 260px;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  height: fit-content;
+  border: 1px solid #eee;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #f0f0f0;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.add-btn {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  flex: 1;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.remove-btn {
+  background-color: white;
+  color: #ff4d8d;
+  border: 1px solid #ff4d8d;
+  padding: 10px;
+  border-radius: 8px;
+  flex: 1;
+  cursor: pointer;
+  font-weight: 600;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 10px 18px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.pagination button.active {
+  background-color: #1a73e8;
+  color: white;
+  border-color: #1a73e8;
+}
+
+.logoutContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.logoutBtn {
+  background-color: #4a5568;
+  color: white;
+  padding: 12px 35px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.popup-box {
+  background: white;
+  padding: 30px 50px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  min-width: 300px;
+}
+
+.popup-box p {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.popup-box button {
+  padding: 8px 25px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-weight: bold;
+}
