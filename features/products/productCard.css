@@ -1,0 +1,71 @@
+.product-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #f0f0f0;
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.discount {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #ff4d8d;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.cost {
+  color: #1a73e8;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.add-btn {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  flex: 1;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: white; 
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  color: #ccc;
+  transition: all 0.3s ease;
+}

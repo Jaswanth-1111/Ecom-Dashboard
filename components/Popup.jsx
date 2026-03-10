@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Popup.css"
 
 const Popup = ({ message, type, onClose }) => {
   if (!message) return null;

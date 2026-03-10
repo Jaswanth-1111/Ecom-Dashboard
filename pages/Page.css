@@ -1,0 +1,86 @@
+.signupPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #244682;
+  padding: 20px;
+}
+
+.signupBox {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.inputIcon {
+  display: flex;
+  align-items: center;
+  background: #f0f2f5;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  gap: 12px;
+}
+
+.inputIcon input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+}
+
+.primaryBtn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #1a73e8, #155ec0);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(26, 115, 232, 0.3);
+}
+
+.linkBtn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: 2px solid #1a73e8;
+  background: white;
+  color: #1a73e8;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.linkBtn:hover {
+  background: #1a73e8;
+  color: white;
+}

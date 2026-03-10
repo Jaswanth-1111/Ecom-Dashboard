@@ -1,18 +1,20 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { signupUser } from "./authSlice";
+import { signupUser } from "../features/auth/authSlice";
 import { FaUser, FaLock, FaEnvelope } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import "./Page.css"
 
-export default function Signup({ goLogin }) {
+export default function SignupPage() {
   const dispatch = useDispatch();
-  const { loading } = useSelector((state) => state.auth);
+  const navigate = useNavigate();
+  const { loading, error } = useSelector((state) => state.auth);
   const [form, setForm] = useState({ 
     firstName: "", lastName: "", username: "", 
     email: "", password: "", confirmPassword: "" 
   });
 
   const update = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-
   const submit = async (e) => {
     e.preventDefault();
     if (form.password !== form.confirmPassword) {
@@ -20,8 +22,9 @@ export default function Signup({ goLogin }) {
       return;
     }
     const result = await dispatch(signupUser(form));
+
     if (signupUser.fulfilled.match(result)) {
-      setTimeout(() => goLogin(), 2000);
+      setTimeout(() => navigate("/login"), 2000);
     }
   };
 
@@ -57,10 +60,12 @@ export default function Signup({ goLogin }) {
           <input name="confirmPassword" type="password" placeholder="Confirm Password" onChange={update} required />
         </div>
 
+        {error && <p className="error" style={{ color: "red" }}>{error}</p>}
+
         <button className="primaryBtn" disabled={loading}>
           {loading ? "Signing up..." : "Signup"}
         </button>
-        <button type="button" onClick={goLogin} className="linkBtn">
+        <button type="button" onClick={() => navigate("/login")} className="linkBtn">
           Already have account? Login
         </button>
       </form>

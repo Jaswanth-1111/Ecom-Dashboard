@@ -17,7 +17,7 @@ export const loginUser = createAsyncThunk(
   "auth/loginUser",
   async (credentials, { rejectWithValue }) => {
     try {
-      const response = await axios.post("http://65.0.29.192:5000/api/auth/login", credentials);
+      const response = await axios.post("http://65.0.29.192:5000/auth/login", credentials);
       return response.data; 
     } catch (err) {
       return rejectWithValue(err.response?.data?.message || "Invalid credentials");
